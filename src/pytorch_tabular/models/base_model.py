@@ -332,7 +332,7 @@ class BaseModel(pl.LightningModule, metaclass=ABCMeta):
             metrics.append(avg_metric)
             self.log(
                 f"{tag}_{metric_str}",
-                avg_metric,
+                avg_metric[1],
                 on_epoch=True,
                 on_step=False,
                 logger=True,
